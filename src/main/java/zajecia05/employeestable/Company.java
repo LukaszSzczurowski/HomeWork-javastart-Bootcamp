@@ -1,16 +1,18 @@
 package zajecia05.employeestable;
 
-import java.sql.Array;
+import java.util.Arrays;
 
 public class Company {
 
-    public static int INDEX = 0;
-    public static int LIMIT_EMPLOYEE = 3;
+
+    public static final int LIMIT_EMPLOYEE = 3;
 
     private Employee[] employees;
+    private int index;
 
     public Company() {
         employees = new Employee[LIMIT_EMPLOYEE];
+        index = 0;
     }
 
     public Employee[] getEmployees() {
@@ -18,9 +20,9 @@ public class Company {
     }
 
     void add(Employee emp) {
-        if (INDEX < employees.length) {
-            employees[INDEX] = emp;
-            INDEX++;
+        if (index < employees.length) {
+            employees[index] = emp;
+            index++;
         } else {
             System.out.println("Nie mozna dodac juz pracownika. lista pelna");
         }
@@ -30,4 +32,9 @@ public class Company {
         return employees[index];
     }
 
+   void printArray() {
+        for (Employee employee : employees) {
+            System.out.println(employee + "");
+        }
+    }
 }

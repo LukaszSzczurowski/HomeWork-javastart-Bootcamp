@@ -1,6 +1,6 @@
 package zajecia05.pricenetto;
 
-public class Service {
+public class PriceService {
 
     double countBruttoPrice(Product product) {
         double bruttoPrice = 0;

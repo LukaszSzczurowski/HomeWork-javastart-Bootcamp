@@ -2,6 +2,8 @@ package zajecia05.employeestable;
 
 import java.util.Arrays;
 
+import static com.sun.org.apache.bcel.internal.classfile.Utility.printArray;
+
 public class TestEmployee {
     public static void main(String[] args) {
         EmployeesService employeesService = new EmployeesService();
@@ -9,22 +11,18 @@ public class TestEmployee {
 
         Company company = new Company();
         company.add(emp1);
-        printArray(company.getEmployees());
+        company.printArray();
 
         Employee emp2 = company.get(0);
         company.add(emp2);
-        printArray(company.getEmployees());
+        company.printArray();
 
         Employee emp3 = company.get(0);
         company.add(emp3);
-        printArray(company.getEmployees());
+        company.printArray();
 
         employeesService.sumSalares(company.getEmployees());
     }
 
-    private static void printArray(Employee[] employees) {
-        for (Employee employee : employees) {
-            System.out.println(employee + "");
-        }
-    }
+
 }
