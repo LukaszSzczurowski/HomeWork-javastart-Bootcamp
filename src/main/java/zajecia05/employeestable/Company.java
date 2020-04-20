@@ -19,6 +19,7 @@ public class Company {
         return employees;
     }
 
+
     void add(Employee emp) {
         if (index < employees.length) {
             employees[index] = emp;

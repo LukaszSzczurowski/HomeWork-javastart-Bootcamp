@@ -8,8 +8,11 @@ public class EmployeesService {
 
     void sumSalares(Employee[] tab) {
         double sum = 0;
-        for (Employee salary : tab) {
-            sum += salary.getSalary();
+        for (Employee employSalary : tab) {
+            if (employSalary == null){
+                continue;
+            }
+            sum += employSalary.getSalary();
         }
         System.out.println("Na wyplaty trzeba przeznaczyw tym miesiacu: " + sum + " zl");
     }
