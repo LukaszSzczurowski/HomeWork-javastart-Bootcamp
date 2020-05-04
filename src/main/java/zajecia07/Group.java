@@ -3,14 +3,14 @@ package zajecia07;
 
 public class Group {
     public String nameGroup;
-    public Person[] group = new Person[3];
+    public Teacher teacher;
+    public Student[] group = new Student[2];
 
 
-    public Group(String nameGroup, Person teacher, Person student1, Person student2) {
+    public Group(String nameGroup, Teacher teacher, Student[] group) {
         this.nameGroup = nameGroup;
-        this.group[0] = teacher;
-        this.group[1] = student1;
-        this.group[2] = student2;
+        this.teacher = teacher;
+        this.group = group;
     }
 
     void print() {

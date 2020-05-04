@@ -1,10 +1,10 @@
 package zajecia07;
 
 public class Person {
-    public String name;
-    public String lastName;
-    public String address;
-    public int telophone;
+    private String name;
+    private String lastName;
+    private String address;
+    private int telophone;
 
     public Person(String name, String lastName, String address, int telophone) {
         this.name = name;
@@ -13,7 +13,7 @@ public class Person {
         this.telophone = telophone;
     }
 
-    void printInfo() {
+    public void printInfo() {
         System.out.printf(name + " " + lastName + ", " + address + ", " + telophone);
     }
 }

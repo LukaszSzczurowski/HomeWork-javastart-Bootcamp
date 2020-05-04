@@ -1,7 +1,7 @@
 package zajecia07;
 
 public class Student extends Person {
-    public int grade;
+    private int grade;
 
     public Student(String name, String lastName, String address, int telophone, int grade) {
         super(name, lastName, address, telophone);
@@ -9,7 +9,7 @@ public class Student extends Person {
     }
 
 
-    void printInfo(){
+    public void printInfo(){
         super.printInfo();
         System.out.println(", id studenta: " + grade);
     }
