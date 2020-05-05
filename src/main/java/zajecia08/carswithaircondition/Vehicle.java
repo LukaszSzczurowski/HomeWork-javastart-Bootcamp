@@ -2,10 +2,10 @@ package zajecia08.carswithaircondition;
 
 public class Vehicle {
     private String name;
-    private float capacityTank;
-    private float mediumFuelConsumption;
+    private double capacityTank;
+    private double mediumFuelConsumption;
 
-    public Vehicle(String name, float capacityTank, float mediumFuelConsumption) {
+    public Vehicle(String name, double capacityTank, double mediumFuelConsumption) {
         this.name = name;
         this.capacityTank = capacityTank;
         this.mediumFuelConsumption = mediumFuelConsumption;
@@ -19,23 +19,23 @@ public class Vehicle {
         this.name = name;
     }
 
-    public float getCapacityTank() {
+    public double getCapacityTank() {
         return capacityTank;
     }
 
-    public void setCapacityTank(float capacityTank) {
+    public void setCapacityTank(double capacityTank) {
         this.capacityTank = capacityTank;
     }
 
-    public float getMediumFuelConsumption() {
+    public double getMediumFuelConsumption() {
         return mediumFuelConsumption;
     }
 
-    public void setMediumFuelConsumption(float mediumFuelConsumption) {
+    public void setMediumFuelConsumption(double mediumFuelConsumption) {
         this.mediumFuelConsumption = mediumFuelConsumption;
     }
 
     String info() {
-        return "Marka: " + name + ",pojemność: " + capacityTank + " ,średinie spalanie: " + mediumFuelConsumption;
+        return String.format("Marka: %s ,pojemność: %.2f ,średinie spalanie: %.2f" , name ,capacityTank ,mediumFuelConsumption);
     }
 }

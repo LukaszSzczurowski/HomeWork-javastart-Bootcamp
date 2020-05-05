@@ -3,7 +3,7 @@ package zajecia08.carswithaircondition;
 public class Truck extends Car {
     private double weightCargo;
 
-    public Truck(String name, float capacityTank, float mediumFuelConsumption, boolean isConditionAir, double weightCargo) {
+    public Truck(String name, double capacityTank, double mediumFuelConsumption, boolean isConditionAir, double weightCargo) {
         super(name, capacityTank, mediumFuelConsumption, isConditionAir);
         this.weightCargo = weightCargo;
     }
@@ -23,6 +23,8 @@ public class Truck extends Car {
 
     @Override
     String info() {
-        return super.info() + " waga ładunku: " + weightCargo;
+
+        return super.info() + String.format(" waga ładunku: %.2f ", weightCargo);
+
     }
 }

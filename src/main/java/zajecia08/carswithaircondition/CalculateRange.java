@@ -2,11 +2,11 @@ package zajecia08.carswithaircondition;
 
 public class CalculateRange {
 
-    float rangeCar(Vehicle car1) {
+    double rangeCar(Vehicle car1) {
         Car car = (Car)car1;
-        float rangeCar;
+        double rangeCar;
         if (car.isConditionAir()) {
-            car.setMediumFuelConsumption((float) (car.getMediumFuelConsumption() + 0.8));
+            car.setMediumFuelConsumption(car.getMediumFuelConsumption() + 0.8);
             rangeCar = (car.getCapacityTank() / car.getMediumFuelConsumption()) * 100;
             return rangeCar;
         } else {
@@ -15,15 +15,15 @@ public class CalculateRange {
         }
     }
 
-    float rangeTruck(Vehicle truck1) {
+    double rangeTruck(Vehicle truck1) {
         Truck truck = (Truck) truck1;
-        float rangeTruck;
+        double rangeTruck;
         if ((truck.isConditionAir())) {
-            truck.setMediumFuelConsumption((float) (truck.getMediumFuelConsumption() + 1.6 + (truck.getWeightCargo() * 0.005)));
+            truck.setMediumFuelConsumption((truck.getMediumFuelConsumption() + 1.6 + (truck.getWeightCargo() * 0.005)));
             rangeTruck = (truck.getCapacityTank() / truck.getMediumFuelConsumption()) * 100;
             return rangeTruck;
         } else {
-            rangeTruck = (float) ((truck.getCapacityTank() / (truck.getMediumFuelConsumption() + (truck.getWeightCargo() * 0.005))) * 100);
+            rangeTruck = ((truck.getCapacityTank() / (truck.getMediumFuelConsumption() + (truck.getWeightCargo() * 0.005 * 100))));
             return rangeTruck;
         }
     }

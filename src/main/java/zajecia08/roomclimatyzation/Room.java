@@ -50,6 +50,6 @@ public class Room {
 
     @Override
     public String toString() {
-        return "Room: " +name + ", actualTemperature=" + actualTemperature;
+        return String.format("W Room: %s , actualTemperature= %.2f" ,name,actualTemperature);
     }
 }
